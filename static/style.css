@@ -1,0 +1,163 @@
+@font-face {
+    font-family: Peralta-Regular;
+    src: url(fonts/Peralta-Regular.ttf);
+}
+@font-face {
+    font-family: Grandstander;
+    src: url(fonts/Grandstander/Grandstander-VariableFont_wght.ttf);
+}
+
+@keyframes submit-animation {
+    to {
+        border-width: 2px;
+        background-color: saddlebrown;
+    }
+}
+
+@keyframes correct-popup {
+    50% {
+        font-size: xxx-large;
+        color: green;
+    }
+    100% {
+        font-size: xx-large;
+
+    }
+}
+
+@keyframes incorrect-popup {
+    50% {
+        font-size: xxx-large;
+        color: red;
+    }
+    100% {
+        font-size: xx-large;
+
+    }
+}
+
+@keyframes fade-in-anim {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in-popup {
+    50% {
+        font-size: xxx-large;
+    }
+    100% {
+        font-size: xx-large;
+        opacity: 1;
+    }
+}
+
+body {
+    margin: 0px;
+    font-family: Grandstander;
+}
+
+h1 {
+    font-family: Peralta-Regular;
+    background-color: chocolate;
+    color: white;
+    font-size: xxx-large;
+    text-align: center;
+    padding: 8px;
+    margin: 0px;
+}
+
+.result-text {
+    font-family: Peralta-Regular;
+    text-align: center;
+    font-size: small;
+    padding: 8px;
+    margin: 0px;
+}
+
+#correct-text {
+    animation-name: correct-popup;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+#incorrect-text {
+    animation-name: incorrect-popup;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+}
+
+
+form {
+    background-color: antiquewhite;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 3px;
+    margin: 3px;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+    margin: 3px;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.form-input {
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: Grandstander;
+    background-color: lightyellow;
+}
+
+.form-submit {
+    border: 1px solid black;
+    border-radius: 4px;
+    font-family: Grandstander;
+    color: white;
+    background-color: darkgoldenrod;
+}
+
+.form-submit:hover {
+    animation-name: submit-animation;
+    animation-duration: 50ms;
+    animation-fill-mode: forwards;
+}
+
+.present-frame {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.result-subtitle {
+    opacity: 0;
+    text-align: center;
+
+    animation-name: fade-in-anim;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+#present {
+    opacity: 0;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+
+    animation-name: fade-in-popup;
+    animation-duration: 700ms;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Santov Dekóder</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <h1>Santov Dekóder</h1>
+    <div class="form-wrapper">
+        <form>
+            <div class="form-item">
+                <label for="people">Človek</label>
+                <select class="form-input" id="people" name="person">
+                    <option value="maminka" {{ "selected" if person == "maminka"}}>Maminka</option>
+                    <option value="tatino" {{ "selected" if person == "tatino" }}>Tatino</option>
+                    <option value="darien" {{ "selected" if person == "darien" }}>Darien</option>
+                    <option value="baba" {{ "selected" if person == "baba" }}>Baba</option>
+                    <option value="dedo" {{ "selected" if person == "dedo" }}>Dedo</option>
+                    <option value="maria" {{ "selected" if person == "maria" }}>Mária</option>
+                    <option value="martin" {{ "selected" if person == "martin" }}>Martin</option>
+                    <option value="mery" {{ "selected" if person == "mery" }}>Mery</option>
+                    <option value="maros" {{ "selected" if person == "maros" }}>Maroš</option>
+                </select>
+            </div>
+            <div class="form-item">
+                <label for="code">Kód</label>
+                <input class="form-input" type="number" id="code" name="code" value="{{ code }}">
+            </div>
+            <div class="form-item">
+                <input class="form-submit" type="submit" value="Dekódovať">
+            </div>
+        </form>
+    </div>
+    {% if correct == True %}
+        <div class="present-frame">
+        <h2 id="correct-text" class="result-text">Bingo!</h2>
+        <span class="result-subtitle">Tvoj darček je číslo:</span>
+        <span id="present">{{ present }}</span>
+    </div>
+    {% elif correct == False %}
+        <div class="present-frame">
+            <h2 id="incorrect-text" class="result-text">Uuups!</h2>
+            <span class="result-subtitle">Skús znova...</span>
+        </div>
+    {% endif %}
+</body>
+</html>
