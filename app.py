@@ -8,12 +8,12 @@ def index():
     person = request.args.get("person")
     code = request.args.get("code")
 
-    try:
-        int(code)
-    except ValueError:
-        return render_template("index.html", correct=False, person=person, code=code)
-
     if code:
+        try:
+            int(code)
+        except ValueError:
+            return render_template("index.html", correct=False, person=person, code=code)
+
         verif = Verifier()
 
         correct, present = verif.verify(person, int(code))
