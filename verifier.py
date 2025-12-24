@@ -1,36 +1,36 @@
 class Verifier:
     codes = {
         "maminka" : {
-            "code": 12345,
-            "present": 541
+            "code": 135,
+            "present": 4
         },
         "tatino": {
-            "code": 12345,
-            "present": 541
+            "code": 7641,
+            "present": 6
         },
         "darien": {
-            "code": 12345,
-            "present": 541
+            "code": 3249,
+            "present": 5
         },
         "baba": {
-            "code": 12345,
-            "present": 541
+            "code": 2378814,
+            "present": 9
         },
         "dedo": {
-            "code": 12345,
-            "present": 541
+            "code": 3756,
+            "present": 2
         },
         "maria": {
-            "code": 12345,
-            "present": 541
+            "code": 4172,
+            "present": 8
         },
         "martin": {
-            "code": 12345,
-            "present": 541
+            "code": 454454,
+            "present": 1
         },
         "mery": {
-            "code": 12345,
-            "present": 541
+            "code": 910202127,
+            "present": 7
         },
         "maros": {
             "code": 12345,
